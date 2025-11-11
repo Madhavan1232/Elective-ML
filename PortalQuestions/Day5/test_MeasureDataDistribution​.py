@@ -6,7 +6,7 @@ from scipy.stats import skew, kurtosis
 
 path = os.path.join(sys.path[0], input())
 df = pd.read_csv(path)
-
+    
 completed_orders = df[df['order_status'] == 'Completed']
 
 amount_range = completed_orders['total_amount'].max() - completed_orders['total_amount'].min()
